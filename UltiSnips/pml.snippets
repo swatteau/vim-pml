@@ -1,0 +1,107 @@
+#
+# PML snippets
+#
+
+snippet obj "PML object" b
+$* -----------------------------------------------------------------------------
+$* ${2:description}
+$* -----------------------------------------------------------------------------
+define object ${1:OBJECTNAME}
+    ${3:$( definition $)}
+endobject
+$* -----------------------------------------------------------------------------
+endsnippet
+
+
+snippet form "PML form"
+$* -----------------------------------------------------------------------------
+$* ${2:description}
+$* -----------------------------------------------------------------------------
+setup form ${1:!!FORM}
+    ${3:$( definition $)}
+exit
+$* -----------------------------------------------------------------------------
+endsnippet
+
+
+snippet fun "PML function" b
+$* -----------------------------------------------------------------------------
+$* ${4:description}
+$* -----------------------------------------------------------------------------
+define function ${1:!!Function}(${2:...})${3: is TYPE}
+    ${5:$( definition $)}
+endfunction
+$* -----------------------------------------------------------------------------
+endsnippet
+
+
+snippet mem "member declaration"
+$* ${3:description}
+member .${1:name} is ${2:TYPE}
+${4}
+endsnippet
+
+
+snippet meth "method declaration" b
+$* -----------------------------------------------------------------------------
+$* ${4:description}
+$* -----------------------------------------------------------------------------
+define method .${1:Method}(${2:...})${3: is TYPE}
+    ${5:$( definition $)}
+endmethod
+$* -----------------------------------------------------------------------------
+endsnippet
+
+
+snippet if "if statement"
+if (${1:$( condition $)}) then
+    ${2:$( code $)}
+endif
+endsnippet
+
+
+snippet elseif "elseif statement"
+elseif (${1:$( condition $)} then
+    ${2:$( code $)}
+endsnippet
+
+
+snippet dov "loop over array values"
+do ${1:!item} values ${2:!array}
+    ${3:$( code $)}
+enddo
+endsnippet
+
+
+snippet doi "loop over array indices"
+do ${1:!i} indices ${2:!array}
+    ${3:$( code $)}
+enddo
+endsnippet
+
+
+snippet do "unconditional loop"
+do
+    ${1:$( code $)}
+enddo
+endsnippet
+
+
+snippet handle "handle statement"
+handle ${1:ANY}
+    ${2:$( code $)}
+endhandle
+endsnippet
+
+
+snippet elseh "elsehandle statement"
+elsehandle ${1:ANY}
+    ${2:$( code $)}
+endsnippet
+
+
+snippet collect "collect"
+var ${1:!var} collect all ${2:elemtype} with ${3:condition}${4: for ce}
+endsnippet
+
+# vim:ft=snippets:

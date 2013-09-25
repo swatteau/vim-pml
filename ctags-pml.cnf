@@ -1,0 +1,6 @@
+--langdef=PML
+--langmap=pml:.pmlobj.pmlfrm.pmlfnc
+--regex-pml=/^[ \t]*member[ \t]+[\.]([a-zA-Z0-9_ ]+)/\1/m,members/
+--regex-pml=/^[ \t]*define[ \t]+method[ \t]+[\.]([a-zA-Z0-9_\(\)\!, ]+)/\1/f,methods/
+--regex-pml=/^define[ \t]+function[ \t]+([a-zA-Z0-9_\(\)\!, ]+)/\1/f,function/
+--regex-pml=/^define[ \t]+object[ \t]+([a-zA-Z0-9_]+)/\1/c,classes/
