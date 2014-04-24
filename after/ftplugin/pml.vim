@@ -7,8 +7,10 @@ let g:tagbar_type_pml = {
     \ 'ctagstype' : 'PML',
     \ 'kinds'     : [
         \ 'c:objects',
-        \ 'm:members',
-        \ 'f:methods',
+        \ 'v:members',
+        \ 'f:functions',
+        \ 'g:forms',
+        \ 'm:methods',
     \ ],
     \ 'deffile' : expand('<sfile>:p:h:h:h') . '/ctags/pml.cnf'
 \ }
