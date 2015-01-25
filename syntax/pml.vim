@@ -22,13 +22,13 @@ syn match pmlType           "[a-zA-Z_][a-zA-Z0-9_]*" contained
 
 
 " Statements
-syn keyword pmlStatement    break skip return
-syn keyword pmlStatement    handle elsehandle endhandle
-syn keyword pmlStatement    object nextgroup=pmlType skipwhite
-syn keyword pmlStatement    form function setup exit
-syn keyword pmlStatement    member nextgroup=pmlId skipwhite
-syn keyword pmlStatement    method nextgroup=pmlId skipwhite
-syn keyword pmlStatement    is nextgroup=pmlType skipwhite
+syn keyword pmlKeyword    break skip return
+syn keyword pmlKeyword    handle elsehandle endhandle
+syn keyword pmlKeyword    object nextgroup=pmlType skipwhite
+syn keyword pmlKeyword    form function setup exit
+syn keyword pmlKeyword    member nextgroup=pmlId skipwhite
+syn keyword pmlKeyword    method nextgroup=pmlId skipwhite
+syn keyword pmlKeyword    is nextgroup=pmlType skipwhite
 
 " Conditionals
 syn keyword pmlConditional  if elseif else endif then
@@ -81,9 +81,10 @@ hi link pmlNumber           Number
 hi link pmlBoolean          Boolean
 hi link pmlBuiltin          Type 
 hi link pmlCommand          Macro
+hi link pmlKeyword          Keyword
 
 " Folding rules
-syn region pmlMethodFold    matchgroup=pmlStatement start="\<define\>" end="\<end\(function\|method\|object\)\>" transparent fold 
+syn region pmlMethodFold    matchgroup=pmlKeyword start="\<define\>" end="\<end\(function\|method\|object\)\>" transparent fold 
 
 let b:current_syntax = "pml"
 
