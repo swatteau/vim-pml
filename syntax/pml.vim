@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language:   PML (Aveva's Programmable Macro Language)
-" Maintainer: Sebastien Watteau <swatteau@gmail.com>
+" Maintainer: Sebastien Watteau
 " Updated:    2009-09-05
 "
 
